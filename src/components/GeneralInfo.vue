@@ -14,15 +14,16 @@
     <div class="form-row">
         <div class="form-group col-md-3">
             <label for="stocks">Stocks</label>
-            <input type="text" class="form-control" id="stocks">
+            <input type="text" v-model="stocks" class="form-control" id="stocks">
+            {{ stocks }}
         </div>
     <div class="form-group col-md-3">
       <label for="Price">Price</label>
-      <input type="text" class="form-control" id="Price">
+      <input type="number" v-model="price" class="form-control" id="Price">
     </div>
     <div class="form-group col-md-3">     
       <label for="Discount">Discount</label>
-      <input type="text" class="form-control" id="Discount">
+      <input type="number" class="form-control" id="Discount">
     </div>
     <div class="form-group col-md-3">
       <label for="Orders">Orders</label>
@@ -37,6 +38,12 @@
 //General
 export default {
     name: 'theInfo',
+    data() {
+      return {
+        stocks: '',
+        price: ''
+      }
+    }
 }
 </script>
 
